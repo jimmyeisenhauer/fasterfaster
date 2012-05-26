@@ -1,4 +1,5 @@
-<h1>Listing contacts</h1>
+<h1>Faster Faster Content</h1>
+<h3>Add your name and comments as fast as you can!<h3>
 
 <table>
   <tr>
@@ -15,11 +16,32 @@
     <td><%= contact.comment %></td>
     <td><%= link_to 'Show', contact %></td>
     <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
-    <td><%= link_to 'Destroy', contact, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Destroy', contact, method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Contact', new_contact_path %>
+<%= link_to 'New Entry', new_contact_path %>
+
+<h1>Cache Stats</h1>
+
+<table>
+  <tr>
+    <th>Metric</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td>Cache hits:</td>
+    <td><%= @stats['get_hits'] %></td>
+  </tr>
+  <tr>
+    <td>Cache misses:</td>
+    <td><%= @stats['get_misses'] %></td>
+  </tr>
+  <tr>
+    <td>Cache flushes:</td>
+    <td><%= @stats['cmd_flush'] %></td>
+  </tr>
+</table>
