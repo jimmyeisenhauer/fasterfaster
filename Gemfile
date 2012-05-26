@@ -13,6 +13,7 @@ group :production do
   gem 'pg'
 end
 gem 'dalli'
+gem 'newrelic_rpm'
 
 
 
