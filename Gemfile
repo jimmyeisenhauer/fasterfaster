@@ -14,6 +14,7 @@ group :production do
 end
 gem 'dalli'
 gem 'newrelic_rpm'
+gem 'unicorn'
 
 
 
